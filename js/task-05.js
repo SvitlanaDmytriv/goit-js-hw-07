@@ -4,5 +4,7 @@ const nameOutputEl = document.querySelector('#name-output')
 inputEl.addEventListener('input',onInputChange)
 
 function onInputChange(event) {
-   nameOutputEl.textContent = event.currentTarget.value
+      event.currentTarget.value.trim()
+      ? nameOutputEl.textContent = event.currentTarget.value
+      : nameOutputEl.textContent = 'незнакомец'
 }
